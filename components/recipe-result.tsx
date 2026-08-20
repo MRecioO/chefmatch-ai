@@ -2,6 +2,7 @@ import { Clock, Flame, Signal, ThumbsDown, ThumbsUp } from 'lucide-react'
 import { ScoreRing } from '@/components/score-ring'
 
 export type RecipeMock = {
+  recetaId: number
   title: string
   summary: string
   time: number
