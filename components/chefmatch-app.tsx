@@ -36,7 +36,7 @@ export function ChefMatchApp() {
       const data = await response.json()
       
       // El JSON que devuelve tu n8n está dentro de un array, agarramos el primer elemento
-      const resultadosAPI = data[0]?.resultados || []
+      const resultadosAPI = data.resultados || data[0]?.resultados || []
       
       // Traducimos el formato de n8n al formato que esperan tus componentes visuales
       const mappedRecipes: RecipeMock[] = resultadosAPI.map((res: any) => ({
